@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/homepage.dart';
 
 void main() {
-  runApp(MaterialApp(
-      title: "Hello World",
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Android app"),
-          centerTitle: true,
-        ),
-        body: Text("HEllo world"),
-        bottomNavigationBar: BottomNavigationBar(
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.search), label: 'search'),
-          ],
-        ),
-      )));
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: HomePage(),
+    );
+  }
 }
